@@ -4,9 +4,13 @@ on:
   schedule: # execute every 12 hours
     - cron: "* */12 * * *"
   workflow_dispatch:
+  
+  push:
+    branches:
+    - master
 
 jobs:
-  build:
+  generate:
     name: Jobs to update datas
     runs-on: ubuntu-latest
     steps:
